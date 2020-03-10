@@ -1,0 +1,15 @@
+
+<div class="container">
+  <%= link_to "new restaurant", new_restaurant_path, class: "btn btn-outline-info my-2" %>
+  <h2 class="text-center py-5 border">RESTAURANTS</h2>
+
+  <% @restaurants.each do |restaurant| %>
+    <div class="container d-flex justify-content-between align-items-center border">
+      <div>
+        <p><strong><%= restaurant.name %></strong></p>
+        <p><em><%= restaurant.address %></em></p>
+      </div>
+      <%= link_to "see more", restaurant_path(restaurant), class: "btn btn-outline-info my-2" %>
+    </div>
+  <% end %>
+</div>
